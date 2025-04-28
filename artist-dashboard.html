@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Dashboard - ArtGalleria</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/user-dropdown.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ArtGalleria</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="artists.html">Artists</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+                <a href="login.html" class="btn btn-login logged-out-only">Login</a>
+                <a href="register.html" class="btn btn-register logged-out-only">Register</a>
+                <div class="user-dropdown logged-in-only" style="display: none;">
+                    <a href="#" class="user-dropdown-toggle">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="user-name">User</span>
+                    </a>
+                    <div class="user-dropdown-menu">
+                        <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+                        <a href="orders.html"><i class="fas fa-shopping-bag"></i> My Orders</a>
+                        <a href="artist-dashboard.html" class="artist-only"><i class="fas fa-palette"></i> Artist Dashboard</a>
+                        <a href="admin-dashboard.html" class="admin-only"><i class="fas fa-cog"></i> Admin Dashboard</a>
+                        <a href="#" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="dashboard-header">
+        <div class="container">
+            <h2>Artist Dashboard</h2>
+            <p>Manage your artworks, exhibitions, and profile</p>
+        </div>
+    </section>
+
+    <section class="dashboard-content">
+        <div class="container">
+            <div class="dashboard-grid">
+                <div class="dashboard-sidebar">
+                    <ul class="dashboard-menu">
+                        <li class="active"><a href="artist-dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                        <li><a href="artist-upload.html"><i class="fas fa-upload"></i> Upload Artwork</a></li>
+                        <li><a href="artist-artworks.html"><i class="fas fa-palette"></i> My Artworks</a></li>
+                        <li><a href="artist-exhibitions.html"><i class="fas fa-calendar-alt"></i> Exhibitions</a></li>
+                        <li><a href="artist-sales.html"><i class="fas fa-chart-line"></i> Sales & Analytics</a></li>
+                        <li><a href="artist-profile-edit.html"><i class="fas fa-user-edit"></i> Edit Profile</a></li>
+                        <li><a href="artist-settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="dashboard-main">
+                    <div class="dashboard-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-palette"></i></div>
+                            <div class="stat-content">
+                                <h3>Artworks</h3>
+                                <p class="stat-number" id="artwork-count">0</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-eye"></i></div>
+                            <div class="stat-content">
+                                <h3>Profile Views</h3>
+                                <p class="stat-number">0</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-shopping-cart"></i></div>
+                            <div class="stat-content">
+                                <h3>Sales</h3>
+                                <p class="stat-number">0</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                            <div class="stat-content">
+                                <h3>Favorites</h3>
+                                <p class="stat-number">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-welcome">
+                        <h3>Welcome to Your Artist Dashboard</h3>
+                        <p>This is your creative control center where you can manage your artwork, track sales, and grow your artistic presence.</p>
+                        
+                        <div class="action-buttons">
+                            <a href="artist-upload.html" class="btn btn-primary"><i class="fas fa-upload"></i> Upload New Artwork</a>
+                            <a href="artist-profile-edit.html" class="btn btn-secondary"><i class="fas fa-user-edit"></i> Edit Profile</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-sections">
+                        <div class="dashboard-section">
+                            <div class="section-header">
+                                <h3>Recent Artworks</h3>
+                                <a href="artist-artworks.html" class="view-all">View All</a>
+                            </div>
+                            
+                            <div class="recent-artworks" id="recent-artworks">
+                                <div class="empty-state">
+                                    <i class="fas fa-palette"></i>
+                                    <p>You haven't uploaded any artworks yet.</p>
+                                    <a href="artist-upload.html" class="btn btn-primary">Upload Your First Artwork</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-section">
+                            <div class="section-header">
+                                <h3>Recent Sales</h3>
+                                <a href="artist-sales.html" class="view-all">View All</a>
+                            </div>
+                            
+                            <div class="recent-sales">
+                                <div class="empty-state">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>You haven't made any sales yet.</p>
+                                    <p class="empty-state-tip">Tip: Complete your profile and upload high-quality images of your artwork to attract buyers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About ArtGalleria</h3>
+                    <p>ArtGalleria is a collaborative marketplace connecting artists with art lovers worldwide. We believe in fair compensation for creators and authentic art for collectors.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="artists.html">Artists</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Art Street, Creative City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@artgalleria.com</p>
+                </div>
+                <div class="footer-section payment">
+                    <h3>Secure Payments</h3>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ArtGalleria. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/db-service.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/auth-forms.js"></script>
+    <script src="js/artist-dashboard.js"></script>
+    <script src="js/auth-test.js"></script>
+</body>
+</html>

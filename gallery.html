@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery - ArtGalleria</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/user-dropdown.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ArtGalleria</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="artists.html">Artists</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+                <a href="login.html" class="btn btn-login logged-out-only">Login</a>
+                <a href="register.html" class="btn btn-register logged-out-only">Register</a>
+                <div class="user-dropdown logged-in-only" style="display: none;">
+                    <a href="#" class="user-dropdown-toggle">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="user-name">User</span>
+                    </a>
+                    <div class="user-dropdown-menu">
+                        <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+                        <a href="orders.html"><i class="fas fa-shopping-bag"></i> My Orders</a>
+                        <a href="artist-dashboard.html" class="artist-only"><i class="fas fa-palette"></i> Artist Dashboard</a>
+                        <a href="admin-dashboard.html" class="admin-only"><i class="fas fa-cog"></i> Admin Dashboard</a>
+                        <a href="#" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>Explore Our Art Collection</h1>
+            <p>Discover unique artworks from talented artists around the world</p>
+        </div>
+    </section>
+
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filter-container">
+                <div class="search-filter">
+                    <input type="text" id="search-artwork" placeholder="Search artworks...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="filter-group">
+                    <div class="filter-dropdown">
+                        <label for="category-filter">Category:</label>
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="painting">Paintings</option>
+                            <option value="sculpture">Sculptures</option>
+                            <option value="photography">Photography</option>
+                            <option value="digital">Digital Art</option>
+                            <option value="mixed-media">Mixed Media</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-dropdown">
+                        <label for="style-filter">Style:</label>
+                        <select id="style-filter">
+                            <option value="all">All Styles</option>
+                            <option value="abstract">Abstract</option>
+                            <option value="contemporary">Contemporary</option>
+                            <option value="impressionist">Impressionist</option>
+                            <option value="realism">Realism</option>
+                            <option value="surrealism">Surrealism</option>
+                            <option value="pop-art">Pop Art</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-dropdown">
+                        <label for="price-filter">Price Range:</label>
+                        <select id="price-filter">
+                            <option value="all">All Prices</option>
+                            <option value="under-100">Under $100</option>
+                            <option value="100-500">$100 - $500</option>
+                            <option value="500-1000">$500 - $1,000</option>
+                            <option value="1000-5000">$1,000 - $5,000</option>
+                            <option value="over-5000">Over $5,000</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-dropdown">
+                        <label for="sort-filter">Sort By:</label>
+                        <select id="sort-filter">
+                            <option value="newest">Newest</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="popular">Most Popular</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="active-filters">
+                <span class="filter-tag">Paintings <i class="fas fa-times"></i></span>
+                <span class="filter-tag">Abstract <i class="fas fa-times"></i></span>
+                <span class="filter-tag">$100 - $500 <i class="fas fa-times"></i></span>
+                <button id="clear-filters">Clear All Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-main">
+        <div class="container">
+            <div class="artwork-grid">
+                <!-- Artwork 1 -->
+                <div class="artwork-card" data-category="painting" data-style="abstract" data-price="450">
+                    <div class="artwork-image">
+                        <img src="images/artwork1.jpg" alt="Colorful Dreams">
+                        <div class="artwork-overlay">
+                            <a href="artwork-details.html?id=1" class="btn btn-view">View Details</a>
+                        </div>
+                        <div class="artwork-badge new">New</div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Colorful Dreams</h3>
+                        <p class="artist">by <a href="artist-profile.html?id=1">Sarah Johnson</a></p>
+                        <div class="artwork-meta">
+                            <span class="category">Painting</span>
+                            <span class="style">Abstract</span>
+                        </div>
+                        <p class="price">$450.00</p>
+                        <div class="artwork-actions">
+                            <button class="btn btn-add-cart" data-id="1">Add to Cart</button>
+                            <button class="btn btn-wishlist" data-id="1"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 2 -->
+                <div class="artwork-card" data-category="painting" data-style="landscape" data-price="350">
+                    <div class="artwork-image">
+                        <img src="images/artwork2.jpg" alt="Mountain Sunset">
+                        <div class="artwork-overlay">
+                            <a href="artwork-details.html?id=2" class="btn btn-view">View Details</a>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Mountain Sunset</h3>
+                        <p class="artist">by <a href="artist-profile.html?id=2">Michael Chen</a></p>
+                        <div class="artwork-meta">
+                            <span class="category">Painting</span>
+                            <span class="style">Landscape</span>
+                        </div>
+                        <p class="price">$350.00</p>
+                        <div class="artwork-actions">
+                            <button class="btn btn-add-cart" data-id="2">Add to Cart</button>
+                            <button class="btn btn-wishlist" data-id="2"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 3 -->
+                <div class="artwork-card" data-category="painting" data-style="portrait" data-price="520">
+                    <div class="artwork-image">
+                        <img src="images/artwork3.jpg" alt="Silent Gaze">
+                        <div class="artwork-overlay">
+                            <a href="artwork-details.html?id=3" class="btn btn-view">View Details</a>
+                        </div>
+                        <div class="artwork-badge featured">Featured</div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Silent Gaze</h3>
+                        <p class="artist">by <a href="artist-profile.html?id=3">Elena Rodriguez</a></p>
+                        <div class="artwork-meta">
+                            <span class="category">Painting</span>
+                            <span class="style">Portrait</span>
+                        </div>
+                        <p class="price">$520.00</p>
+                        <div class="artwork-actions">
+                            <button class="btn btn-add-cart" data-id="3">Add to Cart</button>
+                            <button class="btn btn-wishlist" data-id="3"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 4 -->
+                <div class="artwork-card" data-category="sculpture" data-style="contemporary" data-price="780">
+                    <div class="artwork-image">
+                        <img src="images/artwork4.jpg" alt="Bronze Harmony">
+                        <div class="artwork-overlay">
+                            <a href="artwork-details.html?id=4" class="btn btn-view">View Details</a>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Bronze Harmony</h3>
+                        <p class="artist">by <a href="artist-profile.html?id=4">David Williams</a></p>
+                        <div class="artwork-meta">
+                            <span class="category">Sculpture</span>
+                            <span class="style">Contemporary</span>
+                        </div>
+                        <p class="price">$780.00</p>
+                        <div class="artwork-actions">
+                            <button class="btn btn-add-cart" data-id="4">Add to Cart</button>
+                            <button class="btn btn-wishlist" data-id="4"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 5 -->
+                <div class="artwork-card" data-category="photography" data-style="realism" data-price="280">
+                    <div class="artwork-image">
+                        <img src="images/artwork5.jpg" alt="Urban Reflections">
+                        <div class="artwork-overlay">
+                            <a href="artwork-details.html?id=5" class="btn btn-view">View Details</a>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Urban Reflections</h3>
+                        <p class="artist">by <a href="artist-profile.html?id=5">James Wilson</a></p>
+                        <div class="artwork-meta">
+                            <span class="category">Photography</span>
+                            <span class="style">Realism</span>
+                        </div>
+                        <p class="price">$280.00</p>
+                        <div class="artwork-actions">
+                            <button class="btn btn-add-cart" data-id="5">Add to Cart</button>
+                            <button class="btn btn-wishlist" data-id="5"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 6 -->
+                <div class="artwork-card" data-category="digital" data-style="surrealism" data-price="320">
+                    <div class="artwork-image">
+                        <img src="images/artwork6.jpg" alt="Dream Sequence">
+                        <div class="artwork-overlay">
+                            <a href="artwork-details.html?id=6" class="btn btn-view">View Details</a>
+                        </div>
+                        <div class="artwork-badge sale">Sale</div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Dream Sequence</h3>
+                        <p class="artist">by <a href="artist-profile.html?id=6">Sophia Lee</a></p>
+                        <div class="artwork-meta">
+                            <span class="category">Digital Art</span>
+                            <span class="style">Surrealism</span>
+                        </div>
+                        <div class="price-container">
+                            <p class="price-old">$400.00</p>
+                            <p class="price">$320.00</p>
+                        </div>
+                        <div class="artwork-actions">
+                            <button class="btn btn-add-cart" data-id="6">Add to Cart</button>
+                            <button class="btn btn-wishlist" data-id="6"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 7 -->
+                <div class="artwork-card" data-category="mixed-media" data-style="pop-art" data-price="590">
+                    <div class="artwork-image">
+                        <img src="images/artwork7.jpg" alt="Cultural Fusion">
+                        <div class="artwork-overlay">
+                            <a href="artwork-details.html?id=7" class="btn btn-view">View Details</a>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Cultural Fusion</h3>
+                        <p class="artist">by <a href="artist-profile.html?id=7">Marcus Brown</a></p>
+                        <div class="artwork-meta">
+                            <span class="category">Mixed Media</span>
+                            <span class="style">Pop Art</span>
+                        </div>
+                        <p class="price">$590.00</p>
+                        <div class="artwork-actions">
+                            <button class="btn btn-add-cart" data-id="7">Add to Cart</button>
+                            <button class="btn btn-wishlist" data-id="7"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 8 -->
+                <div class="artwork-card" data-category="painting" data-style="impressionist" data-price="420">
+                    <div class="artwork-image">
+                        <img src="images/artwork8.jpg" alt="Garden Whispers">
+                        <div class="artwork-overlay">
+                            <a href="artwork-details.html?id=8" class="btn btn-view">View Details</a>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Garden Whispers</h3>
+                        <p class="artist">by <a href="artist-profile.html?id=8">Emma Thompson</a></p>
+                        <div class="artwork-meta">
+                            <span class="category">Painting</span>
+                            <span class="style">Impressionist</span>
+                        </div>
+                        <p class="price">$420.00</p>
+                        <div class="artwork-actions">
+                            <button class="btn btn-add-cart" data-id="8">Add to Cart</button>
+                            <button class="btn btn-wishlist" data-id="8"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 9 -->
+                <div class="artwork-card" data-category="sculpture" data-style="abstract" data-price="850">
+                    <div class="artwork-image">
+                        <img src="images/artwork9.jpg" alt="Metal Flow">
+                        <div class="artwork-overlay">
+                            <a href="artwork-details.html?id=9" class="btn btn-view">View Details</a>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Metal Flow</h3>
+                        <p class="artist">by <a href="artist-profile.html?id=4">David Williams</a></p>
+                        <div class="artwork-meta">
+                            <span class="category">Sculpture</span>
+                            <span class="style">Abstract</span>
+                        </div>
+                        <p class="price">$850.00</p>
+                        <div class="artwork-actions">
+                            <button class="btn btn-add-cart" data-id="9">Add to Cart</button>
+                            <button class="btn btn-wishlist" data-id="9"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 10 -->
+                <div class="artwork-card" data-category="photography" data-style="contemporary" data-price="380">
+                    <div class="artwork-image">
+                        <img src="images/artwork10.jpg" alt="Coastal Dawn">
+                        <div class="artwork-overlay">
+                            <a href="artwork-details.html?id=10" class="btn btn-view">View Details</a>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Coastal Dawn</h3>
+                        <p class="artist">by <a href="artist-profile.html?id=5">James Wilson</a></p>
+                        <div class="artwork-meta">
+                            <span class="category">Photography</span>
+                            <span class="style">Contemporary</span>
+                        </div>
+                        <p class="price">$380.00</p>
+                        <div class="artwork-actions">
+                            <button class="btn btn-add-cart" data-id="10">Add to Cart</button>
+                            <button class="btn btn-wishlist" data-id="10"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 11 -->
+                <div class="artwork-card" data-category="digital" data-style="realism" data-price="290">
+                    <div class="artwork-image">
+                        <img src="images/artwork11.jpg" alt="Digital Portrait">
+                        <div class="artwork-overlay">
+                            <a href="artwork-details.html?id=11" class="btn btn-view">View Details</a>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Digital Portrait</h3>
+                        <p class="artist">by <a href="artist-profile.html?id=6">Sophia Lee</a></p>
+                        <div class="artwork-meta">
+                            <span class="category">Digital Art</span>
+                            <span class="style">Realism</span>
+                        </div>
+                        <p class="price">$290.00</p>
+                        <div class="artwork-actions">
+                            <button class="btn btn-add-cart" data-id="11">Add to Cart</button>
+                            <button class="btn btn-wishlist" data-id="11"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 12 -->
+                <div class="artwork-card" data-category="mixed-media" data-style="contemporary" data-price="480">
+                    <div class="artwork-image">
+                        <img src="images/artwork12.jpg" alt="Textured Memories">
+                        <div class="artwork-overlay">
+                            <a href="artwork-details.html?id=12" class="btn btn-view">View Details</a>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Textured Memories</h3>
+                        <p class="artist">by <a href="artist-profile.html?id=7">Marcus Brown</a></p>
+                        <div class="artwork-meta">
+                            <span class="category">Mixed Media</span>
+                            <span class="style">Contemporary</span>
+                        </div>
+                        <p class="price">$480.00</p>
+                        <div class="artwork-actions">
+                            <button class="btn btn-add-cart" data-id="12">Add to Cart</button>
+                            <button class="btn btn-wishlist" data-id="12"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link">4</a>
+                <a href="#" class="page-link next"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated with New Artwork</h2>
+                <p>Subscribe to our newsletter to receive updates on new artists, artwork, and exclusive offers.</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About ArtGalleria</h3>
+                    <p>ArtGalleria is a collaborative marketplace connecting artists with art lovers worldwide. We believe in fair compensation for creators and authentic art for collectors.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="artists.html">Artists</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Art Street, Creative City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@artgalleria.com</p>
+                </div>
+                <div class="footer-section payment">
+                    <h3>Secure Payments</h3>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ArtGalleria. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/db-service.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/auth-forms.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - ArtGalleria</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ArtGalleria</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="artists.html">Artists</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span id="cart-count">3</span></a>
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="register.html" class="btn btn-register">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="checkout-section">
+        <div class="container">
+            <div class="section-header">
+                <h1>Checkout</h1>
+                <p>Complete your purchase</p>
+            </div>
+
+            <div class="checkout-progress">
+                <div class="progress-step active">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Shipping</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Payment</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Review</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Confirmation</div>
+                </div>
+            </div>
+
+            <div class="checkout-container">
+                <div class="checkout-form-container">
+                    <!-- Shipping Information Form -->
+                    <div class="checkout-form" id="shipping-form">
+                        <h2>Shipping Information</h2>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First Name*</label>
+                                <input type="text" id="first-name" name="first-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name*</label>
+                                <input type="text" id="last-name" name="last-name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number*</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Street Address*</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address2">Apartment, Suite, etc. (optional)</label>
+                            <input type="text" id="address2" name="address2">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City*</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State/Province*</label>
+                                <input type="text" id="state" name="state" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="zip">Zip/Postal Code*</label>
+                                <input type="text" id="zip" name="zip" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country*</label>
+                                <select id="country" name="country" required>
+                                    <option value="">Select Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="FR">France</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="JP">Japan</option>
+                                    <!-- Add more countries as needed -->
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="save-info" name="save-info">
+                            <label for="save-info">Save this information for next time</label>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="different-billing" name="different-billing">
+                            <label for="different-billing">Billing address is different from shipping address</label>
+                        </div>
+                        
+                        <div class="shipping-options">
+                            <h3>Shipping Method</h3>
+                            
+                            <div class="shipping-option">
+                                <input type="radio" id="standard-shipping" name="shipping-method" value="standard" checked>
+                                <label for="standard-shipping">
+                                    <div class="option-details">
+                                        <div class="option-name">Standard Shipping</div>
+                                        <div class="option-description">5-7 business days</div>
+                                    </div>
+                                    <div class="option-price">$15.00</div>
+                                </label>
+                            </div>
+                            
+                            <div class="shipping-option">
+                                <input type="radio" id="express-shipping" name="shipping-method" value="express">
+                                <label for="express-shipping">
+                                    <div class="option-details">
+                                        <div class="option-name">Express Shipping</div>
+                                        <div class="option-description">2-3 business days</div>
+                                    </div>
+                                    <div class="option-price">$35.00</div>
+                                </label>
+                            </div>
+                            
+                            <div class="shipping-option">
+                                <input type="radio" id="next-day-shipping" name="shipping-method" value="next-day">
+                                <label for="next-day-shipping">
+                                    <div class="option-details">
+                                        <div class="option-name">Next Day Delivery</div>
+                                        <div class="option-description">Next business day</div>
+                                    </div>
+                                    <div class="option-price">$50.00</div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <a href="cart.html" class="btn btn-outline">Back to Cart</a>
+                            <button type="button" class="btn btn-primary" id="to-payment-btn">Continue to Payment</button>
+                        </div>
+                    </div>
+
+                    <!-- Payment Information Form (Initially Hidden) -->
+                    <div class="checkout-form hidden" id="payment-form">
+                        <h2>Payment Information</h2>
+                        
+                        <div class="payment-methods-tabs">
+                            <div class="payment-tab active" data-tab="credit-card">
+                                <i class="fas fa-credit-card"></i> Credit Card
+                            </div>
+                            <div class="payment-tab" data-tab="paypal">
+                                <i class="fab fa-paypal"></i> PayPal
+                            </div>
+                            <div class="payment-tab" data-tab="bank-transfer">
+                                <i class="fas fa-university"></i> Bank Transfer
+                            </div>
+                        </div>
+                        
+                        <div class="payment-tab-content active" id="credit-card-content">
+                            <div class="form-group">
+                                <label for="card-name">Name on Card*</label>
+                                <input type="text" id="card-name" name="card-name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="card-number">Card Number*</label>
+                                <div class="card-input-container">
+                                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+                                    <div class="card-icons">
+                                        <i class="fab fa-cc-visa"></i>
+                                        <i class="fab fa-cc-mastercard"></i>
+                                        <i class="fab fa-cc-amex"></i>
+                                        <i class="fab fa-cc-discover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiry-date">Expiry Date*</label>
+                                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV*</label>
+                                    <div class="cvv-container">
+                                        <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                                        <i class="fas fa-question-circle cvv-help"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="save-card" name="save-card">
+                                <label for="save-card">Save card for future purchases</label>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-tab-content" id="paypal-content">
+                            <div class="paypal-info">
+                                <div class="paypal-logo">
+                                    <i class="fab fa-paypal"></i>
+                                </div>
+                                <p>You will be redirected to PayPal to complete your payment securely.</p>
+                                <button type="button" class="btn btn-paypal">Pay with PayPal</button>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-tab-content" id="bank-transfer-content">
+                            <div class="bank-info">
+                                <h3>Bank Account Details</h3>
+                                <p>Please use the following details to make a bank transfer:</p>
+                                <div class="bank-details">
+                                    <div class="detail-row">
+                                        <span class="detail-label">Bank Name:</span>
+                                        <span class="detail-value">ArtGalleria Bank</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Account Name:</span>
+                                        <span class="detail-value">ArtGalleria Inc.</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Account Number:</span>
+                                        <span class="detail-value">1234567890</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Routing Number:</span>
+                                        <span class="detail-value">987654321</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Reference:</span>
+                                        <span class="detail-value">ORDER-12345</span>
+                                    </div>
+                                </div>
+                                <p class="bank-note">Please include your order number as a reference. Your order will be processed once payment is received.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" id="back-to-shipping-btn">Back to Shipping</button>
+                            <button type="button" class="btn btn-primary" id="to-review-btn">Review Order</button>
+                        </div>
+                    </div>
+
+                    <!-- Order Review (Initially Hidden) -->
+                    <div class="checkout-form hidden" id="review-form">
+                        <h2>Review Your Order</h2>
+                        
+                        <div class="review-section">
+                            <div class="review-header">
+                                <h3>Shipping Information</h3>
+                                <button class="edit-btn" data-section="shipping">Edit</button>
+                            </div>
+                            <div class="review-content" id="shipping-review">
+                                <p><strong>John Doe</strong></p>
+                                <p>123 Art Street, Apt 4B</p>
+                                <p>Creative City, CA 12345</p>
+                                <p>United States</p>
+                                <p>Phone: (555) 123-4567</p>
+                                <p>Email: john.doe@example.com</p>
+                                <p class="shipping-method">Standard Shipping (5-7 business days)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="review-section">
+                            <div class="review-header">
+                                <h3>Payment Information</h3>
+                                <button class="edit-btn" data-section="payment">Edit</button>
+                            </div>
+                            <div class="review-content" id="payment-review">
+                                <p><i class="fas fa-credit-card"></i> Credit Card</p>
+                                <p>Visa ending in 4242</p>
+                                <p>Expiry: 12/25</p>
+                            </div>
+                        </div>
+                        
+                        <div class="review-section">
+                            <div class="review-header">
+                                <h3>Order Items</h3>
+                                <button class="edit-btn" data-section="cart">Edit</button>
+                            </div>
+                            <div class="review-content" id="items-review">
+                                <div class="review-item">
+                                    <div class="review-item-image">
+                                        <img src="images/artwork1.jpg" alt="Colorful Dreams">
+                                    </div>
+                                    <div class="review-item-details">
+                                        <h4>Colorful Dreams</h4>
+                                        <p>by Sarah Johnson</p>
+                                        <p>Quantity: 1</p>
+                                    </div>
+                                    <div class="review-item-price">$450.00</div>
+                                </div>
+                                
+                                <div class="review-item">
+                                    <div class="review-item-image">
+                                        <img src="images/artwork3.jpg" alt="Silent Gaze">
+                                    </div>
+                                    <div class="review-item-details">
+                                        <h4>Silent Gaze</h4>
+                                        <p>by Elena Rodriguez</p>
+                                        <p>Quantity: 1</p>
+                                    </div>
+                                    <div class="review-item-price">$520.00</div>
+                                </div>
+                                
+                                <div class="review-item">
+                                    <div class="review-item-image">
+                                        <img src="images/artwork6.jpg" alt="Dream Sequence">
+                                    </div>
+                                    <div class="review-item-details">
+                                        <h4>Dream Sequence</h4>
+                                        <p>by Sophia Lee</p>
+                                        <p>Quantity: 1</p>
+                                        <span class="item-sale">Sale</span>
+                                    </div>
+                                    <div class="review-item-price">
+                                        <span class="price-old">$400.00</span>
+                                        <span class="price-current">$320.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="order-notes">Order Notes (Optional)</label>
+                            <textarea id="order-notes" name="order-notes" rows="3" placeholder="Special instructions for delivery or packaging"></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group terms-checkbox">
+                            <input type="checkbox" id="terms-agree" name="terms-agree" required>
+                            <label for="terms-agree">I agree to the <a href="terms.html">Terms and Conditions</a> and <a href="privacy.html">Privacy Policy</a></label>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" id="back-to-payment-btn">Back to Payment</button>
+                            <button type="button" class="btn btn-primary" id="place-order-btn">Place Order</button>
+                        </div>
+                    </div>
+
+                    <!-- Order Confirmation (Initially Hidden) -->
+                    <div class="checkout-form hidden" id="confirmation-form">
+                        <div class="confirmation-content">
+                            <div class="confirmation-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h2>Thank You for Your Order!</h2>
+                            <p class="confirmation-message">Your order has been placed successfully.</p>
+                            <div class="order-number">
+                                <p>Order Number: <strong>#AG12345678</strong></p>
+                                <p>Date: March 25, 2025</p>
+                            </div>
+                            <p class="confirmation-email">A confirmation email has been sent to <strong>john.doe@example.com</strong></p>
+                            <div class="confirmation-details">
+                                <p>We'll notify you when your order ships. You can track your order status in your account dashboard.</p>
+                            </div>
+                            <div class="confirmation-actions">
+                                <a href="order-tracking.html" class="btn btn-secondary">Track Order</a>
+                                <a href="index.html" class="btn btn-primary">Continue Shopping</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    
+                    <div class="summary-items">
+                        <div class="summary-item">
+                            <div class="item-image">
+                                <img src="images/artwork1.jpg" alt="Colorful Dreams">
+                            </div>
+                            <div class="item-details">
+                                <h4>Colorful Dreams</h4>
+                                <p>by Sarah Johnson</p>
+                                <p>Qty: 1</p>
+                            </div>
+                            <div class="item-price">$450.00</div>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <div class="item-image">
+                                <img src="images/artwork3.jpg" alt="Silent Gaze">
+                            </div>
+                            <div class="item-details">
+                                <h4>Silent Gaze</h4>
+                                <p>by Elena Rodriguez</p>
+                                <p>Qty: 1</p>
+                            </div>
+                            <div class="item-price">$520.00</div>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <div class="item-image">
+                                <img src="images/artwork6.jpg" alt="Dream Sequence">
+                            </div>
+                            <div class="item-details">
+                                <h4>Dream Sequence</h4>
+                                <p>by Sophia Lee</p>
+                                <p>Qty: 1</p>
+                                <span class="item-sale">Sale</span>
+                            </div>
+                            <div class="item-price">
+                                <span class="price-old">$400.00</span>
+                                <span class="price-current">$320.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="coupon-form">
+                        <input type="text" placeholder="Coupon Code" class="coupon-input">
+                        <button class="btn btn-secondary">Apply</button>
+                    </div>
+                    
+                    <div class="summary-totals">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span>$1,290.00</span>
+                        </div>
+                        
+                        <div class="summary-row discount">
+                            <span>Discount</span>
+                            <span>-$80.00</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span id="shipping-cost">$35.00</span>
+                        </div>
+                        
+                        <div class="summary-row tax">
+                            <span>Tax</span>
+                            <span>$124.50</span>
+                        </div>
+                        
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span>$1,369.50</span>
+                        </div>
+                    </div>
+                    
+                    <div class="secure-checkout">
+                        <div class="secure-icons">
+                            <i class="fas fa-lock"></i>
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                        <p>Secure Checkout</p>
+                    </div>
+                    
+                    <div class="customer-support">
+                        <h3>Need Help?</h3>
+                        <p><i class="fas fa-phone"></i> Call us at: (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> Email: support@artgalleria.com</p>
+                        <p><i class="fas fa-clock"></i> Hours: Mon-Fri, 9am-5pm EST</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About ArtGalleria</h3>
+                    <p>ArtGalleria is a collaborative marketplace connecting artists with art lovers worldwide. We believe in fair compensation for creators and authentic art for collectors.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="artists.html">Artists</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Art Street, Creative City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@artgalleria.com</p>
+                </div>
+                <div class="footer-section payment">
+                    <h3>Secure Payments</h3>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ArtGalleria. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

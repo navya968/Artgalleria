@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - ArtGalleria</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/user-dropdown.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ArtGalleria</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="artists.html">Artists</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+                <a href="login.html" class="btn btn-login logged-out-only">Login</a>
+                <a href="register.html" class="btn btn-register logged-out-only">Register</a>
+                <div class="user-dropdown logged-in-only" style="display: none;">
+                    <a href="#" class="user-dropdown-toggle">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="user-name">User</span>
+                    </a>
+                    <div class="user-dropdown-menu">
+                        <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+                        <a href="orders.html"><i class="fas fa-shopping-bag"></i> My Orders</a>
+                        <a href="artist-dashboard.html" class="artist-only"><i class="fas fa-palette"></i> Artist Dashboard</a>
+                        <a href="admin-dashboard.html" class="admin-only"><i class="fas fa-cog"></i> Admin Dashboard</a>
+                        <a href="#" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="profile-header">
+        <div class="container">
+            <div class="profile-header-content">
+                <div class="profile-image">
+                    <img src="images/users/default-profile.jpg" alt="Profile" id="profile-image">
+                    <div class="edit-profile-image">
+                        <i class="fas fa-camera"></i>
+                        <input type="file" id="profile-image-upload" accept="image/*">
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <h2 id="profile-name">User Name</h2>
+                    <p id="profile-email">user@example.com</p>
+                    <div class="profile-meta">
+                        <span><i class="fas fa-calendar-alt"></i> Member since <span id="member-since">January 2025</span></span>
+                        <span id="artist-badge" class="artist-only" style="display: none;"><i class="fas fa-palette"></i> Artist</span>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <a href="profile-edit.html" class="btn btn-secondary"><i class="fas fa-edit"></i> Edit Profile</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="profile-content">
+        <div class="container">
+            <div class="profile-tabs">
+                <button class="tab-btn active" data-tab="orders">My Orders</button>
+                <button class="tab-btn" data-tab="favorites">Favorites</button>
+                <button class="tab-btn" data-tab="settings">Settings</button>
+                <button class="tab-btn artist-only" data-tab="artworks" style="display: none;">My Artworks</button>
+            </div>
+            
+            <div class="tab-content">
+                <div class="tab-pane active" id="orders-tab">
+                    <h3>My Orders</h3>
+                    <div class="orders-list" id="orders-list">
+                        <div class="empty-state">
+                            <i class="fas fa-shopping-bag"></i>
+                            <p>You haven't placed any orders yet.</p>
+                            <a href="gallery.html" class="btn btn-primary">Browse Gallery</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane" id="favorites-tab">
+                    <h3>Favorite Artworks</h3>
+                    <div class="favorites-grid" id="favorites-grid">
+                        <div class="empty-state">
+                            <i class="fas fa-heart"></i>
+                            <p>You haven't added any artworks to your favorites yet.</p>
+                            <a href="gallery.html" class="btn btn-primary">Explore Artworks</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane" id="settings-tab">
+                    <h3>Account Settings</h3>
+                    
+                    <div class="settings-section">
+                        <h4>Change Password</h4>
+                        <form id="change-password-form" class="settings-form">
+                            <div class="form-group">
+                                <label for="current-password">Current Password</label>
+                                <input type="password" id="current-password" name="current-password" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="new-password">New Password</label>
+                                <input type="password" id="new-password" name="new-password" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirm-new-password">Confirm New Password</label>
+                                <input type="password" id="confirm-new-password" name="confirm-new-password" required>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Update Password</button>
+                        </form>
+                    </div>
+                    
+                    <div class="settings-section">
+                        <h4>Notification Preferences</h4>
+                        <form id="notification-form" class="settings-form">
+                            <div class="form-check">
+                                <input type="checkbox" id="email-orders" name="email-orders" checked>
+                                <label for="email-orders">Email me about order updates</label>
+                            </div>
+                            
+                            <div class="form-check">
+                                <input type="checkbox" id="email-promotions" name="email-promotions" checked>
+                                <label for="email-promotions">Email me about promotions and new artworks</label>
+                            </div>
+                            
+                            <div class="form-check">
+                                <input type="checkbox" id="email-newsletter" name="email-newsletter" checked>
+                                <label for="email-newsletter">Subscribe to newsletter</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Save Preferences</button>
+                        </form>
+                    </div>
+                    
+                    <div class="settings-section">
+                        <h4>Delete Account</h4>
+                        <p class="warning-text">Warning: This action cannot be undone. All your data will be permanently deleted.</p>
+                        <button id="delete-account-btn" class="btn btn-danger">Delete My Account</button>
+                    </div>
+                </div>
+                
+                <div class="tab-pane artist-only" id="artworks-tab" style="display: none;">
+                    <h3>My Artworks</h3>
+                    <div class="artworks-actions">
+                        <a href="artist-upload.html" class="btn btn-primary"><i class="fas fa-upload"></i> Upload New Artwork</a>
+                    </div>
+                    
+                    <div class="artworks-grid" id="artworks-grid">
+                        <div class="empty-state">
+                            <i class="fas fa-palette"></i>
+                            <p>You haven't uploaded any artworks yet.</p>
+                            <a href="artist-upload.html" class="btn btn-primary">Upload Your First Artwork</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About ArtGalleria</h3>
+                    <p>ArtGalleria is a collaborative marketplace connecting artists with art lovers worldwide. We believe in fair compensation for creators and authentic art for collectors.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="artists.html">Artists</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Art Street, Creative City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@artgalleria.com</p>
+                </div>
+                <div class="footer-section payment">
+                    <h3>Secure Payments</h3>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ArtGalleria. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/db-service.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/auth-forms.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/auth-test.js"></script>
+</body>
+</html>

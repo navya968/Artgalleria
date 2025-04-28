@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Profile - ArtGalleria</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/artist-profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ArtGalleria</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="artists.html">Artists</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span id="cart-count">3</span></a>
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="register.html" class="btn btn-register">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="artist-hero">
+        <div class="container">
+            <div class="artist-profile-header">
+                <div class="artist-image">
+                    <img src="images/artist1.jpg" alt="Sarah Johnson">
+                </div>
+                <div class="artist-info">
+                    <h1>Sarah Johnson</h1>
+                    <p class="artist-title">Contemporary Abstract Artist</p>
+                    <div class="artist-location">
+                        <i class="fas fa-map-marker-alt"></i> New York, USA
+                    </div>
+                    <div class="artist-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <div class="artist-actions">
+                        <a href="#contact-artist" class="btn btn-primary">Contact Artist</a>
+                        <a href="#" class="btn btn-outline follow-btn">
+                            <i class="far fa-heart"></i> Follow
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="artist-bio">
+        <div class="container">
+            <div class="bio-content">
+                <h2>About the Artist</h2>
+                <p>Sarah Johnson is a contemporary abstract artist known for her vibrant use of color and dynamic compositions. With over 15 years of experience, she has developed a distinctive style that combines elements of expressionism and geometric abstraction.</p>
+                <p>Born and raised in Chicago, Sarah studied Fine Arts at the prestigious Art Institute of Chicago before moving to New York to pursue her artistic career. Her work has been exhibited in galleries across the United States and Europe, and she has been commissioned for several public art installations.</p>
+                <p>Sarah's paintings are characterized by bold brushstrokes, layered textures, and a harmonious balance between chaos and order. She draws inspiration from urban landscapes, natural phenomena, and emotional experiences, translating these influences into captivating visual narratives.</p>
+                <blockquote>
+                    "I believe art should evoke emotion and spark conversation. My goal is to create pieces that resonate with viewers on a personal level, inviting them to find their own meaning within the abstract forms and colors."
+                    <cite>- Sarah Johnson</cite>
+                </blockquote>
+            </div>
+            <div class="bio-stats">
+                <div class="stat-item">
+                    <span class="stat-number">120+</span>
+                    <span class="stat-label">Artworks</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">35</span>
+                    <span class="stat-label">Exhibitions</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Awards</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">8.5k</span>
+                    <span class="stat-label">Followers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="artist-gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Artworks</h2>
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="abstract">Abstract</button>
+                    <button class="filter-btn" data-filter="landscape">Landscape</button>
+                    <button class="filter-btn" data-filter="portrait">Portrait</button>
+                </div>
+            </div>
+            
+            <div class="artwork-grid">
+                <!-- Artwork 1 -->
+                <div class="artwork-card" data-category="abstract">
+                    <div class="artwork-image">
+                        <img src="images/artwork1.jpg" alt="Colorful Dreams">
+                        <div class="artwork-overlay">
+                            <div class="overlay-actions">
+                                <a href="#" class="overlay-btn view-btn"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="overlay-btn cart-btn"><i class="fas fa-shopping-cart"></i></a>
+                                <a href="#" class="overlay-btn like-btn"><i class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artwork-details">
+                        <h3><a href="artwork-detail.html">Colorful Dreams</a></h3>
+                        <p class="artwork-category">Abstract</p>
+                        <div class="artwork-price">$450.00</div>
+                    </div>
+                </div>
+                
+                <!-- Artwork 2 -->
+                <div class="artwork-card" data-category="landscape">
+                    <div class="artwork-image">
+                        <img src="images/artwork2.jpg" alt="Urban Rhythm">
+                        <div class="artwork-overlay">
+                            <div class="overlay-actions">
+                                <a href="#" class="overlay-btn view-btn"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="overlay-btn cart-btn"><i class="fas fa-shopping-cart"></i></a>
+                                <a href="#" class="overlay-btn like-btn"><i class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artwork-details">
+                        <h3><a href="artwork-detail.html">Urban Rhythm</a></h3>
+                        <p class="artwork-category">Landscape</p>
+                        <div class="artwork-price">$380.00</div>
+                    </div>
+                </div>
+                
+                <!-- Artwork 3 -->
+                <div class="artwork-card" data-category="abstract">
+                    <div class="artwork-image">
+                        <img src="images/artwork3.jpg" alt="Silent Gaze">
+                        <div class="artwork-overlay">
+                            <div class="overlay-actions">
+                                <a href="#" class="overlay-btn view-btn"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="overlay-btn cart-btn"><i class="fas fa-shopping-cart"></i></a>
+                                <a href="#" class="overlay-btn like-btn"><i class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artwork-details">
+                        <h3><a href="artwork-detail.html">Silent Gaze</a></h3>
+                        <p class="artwork-category">Abstract</p>
+                        <div class="artwork-price">$520.00</div>
+                    </div>
+                </div>
+                
+                <!-- Artwork 4 -->
+                <div class="artwork-card" data-category="portrait">
+                    <div class="artwork-image">
+                        <img src="images/artwork4.jpg" alt="Whispers of Color">
+                        <div class="artwork-overlay">
+                            <div class="overlay-actions">
+                                <a href="#" class="overlay-btn view-btn"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="overlay-btn cart-btn"><i class="fas fa-shopping-cart"></i></a>
+                                <a href="#" class="overlay-btn like-btn"><i class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artwork-details">
+                        <h3><a href="artwork-detail.html">Whispers of Color</a></h3>
+                        <p class="artwork-category">Portrait</p>
+                        <div class="artwork-price">$420.00</div>
+                    </div>
+                </div>
+                
+                <!-- Artwork 5 -->
+                <div class="artwork-card" data-category="landscape">
+                    <div class="artwork-image">
+                        <img src="images/artwork5.jpg" alt="Serene Horizon">
+                        <div class="artwork-overlay">
+                            <div class="overlay-actions">
+                                <a href="#" class="overlay-btn view-btn"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="overlay-btn cart-btn"><i class="fas fa-shopping-cart"></i></a>
+                                <a href="#" class="overlay-btn like-btn"><i class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artwork-details">
+                        <h3><a href="artwork-detail.html">Serene Horizon</a></h3>
+                        <p class="artwork-category">Landscape</p>
+                        <div class="artwork-price">$550.00</div>
+                    </div>
+                </div>
+                
+                <!-- Artwork 6 -->
+                <div class="artwork-card" data-category="abstract">
+                    <div class="artwork-image">
+                        <img src="images/artwork6.jpg" alt="Dream Sequence">
+                        <div class="artwork-overlay">
+                            <div class="overlay-actions">
+                                <a href="#" class="overlay-btn view-btn"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="overlay-btn cart-btn"><i class="fas fa-shopping-cart"></i></a>
+                                <a href="#" class="overlay-btn like-btn"><i class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artwork-details">
+                        <h3><a href="artwork-detail.html">Dream Sequence</a></h3>
+                        <p class="artwork-category">Abstract</p>
+                        <div class="artwork-price">
+                            <span class="price-old">$400.00</span>
+                            <span class="price-current">$320.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all-container">
+                <a href="gallery.html" class="btn btn-secondary">View All Artworks</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="artist-exhibitions">
+        <div class="container">
+            <h2>Exhibitions & Events</h2>
+            <div class="exhibitions-grid">
+                <div class="exhibition-card">
+                    <div class="exhibition-date">
+                        <span class="month">MAR</span>
+                        <span class="day">15</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="exhibition-details">
+                        <h3>Color & Form: A Solo Exhibition</h3>
+                        <p class="exhibition-location"><i class="fas fa-map-marker-alt"></i> Modern Art Gallery, New York</p>
+                        <p class="exhibition-time"><i class="far fa-clock"></i> 6:00 PM - 9:00 PM</p>
+                        <p class="exhibition-description">Join us for the opening reception of Sarah Johnson's latest collection of abstract works exploring the relationship between color and form.</p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="exhibition-card">
+                    <div class="exhibition-date">
+                        <span class="month">APR</span>
+                        <span class="day">22</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="exhibition-details">
+                        <h3>Artist Talk: Creative Process</h3>
+                        <p class="exhibition-location"><i class="fas fa-map-marker-alt"></i> City Arts Center, Boston</p>
+                        <p class="exhibition-time"><i class="far fa-clock"></i> 2:00 PM - 4:00 PM</p>
+                        <p class="exhibition-description">Sarah Johnson discusses her creative process, inspirations, and techniques in this intimate artist talk and Q&A session.</p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="exhibition-card">
+                    <div class="exhibition-date">
+                        <span class="month">JUN</span>
+                        <span class="day">10</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="exhibition-details">
+                        <h3>Summer Art Fair</h3>
+                        <p class="exhibition-location"><i class="fas fa-map-marker-alt"></i> Riverside Park, Chicago</p>
+                        <p class="exhibition-time"><i class="far fa-clock"></i> 10:00 AM - 6:00 PM</p>
+                        <p class="exhibition-description">Sarah will be showcasing a selection of her works at the annual Summer Art Fair, featuring over 100 artists from around the country.</p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="artist-contact" id="contact-artist">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Interested in commissioning a piece or have questions about Sarah's work? Fill out the form to get in touch directly with the artist.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div class="method-details">
+                                <h3>Email</h3>
+                                <p>sarah.johnson@artgalleria.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div class="method-details">
+                                <h3>Phone</h3>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="method-details">
+                                <h3>Studio</h3>
+                                <p>123 Art District, New York, NY 10001</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artist-availability">
+                        <h3>Studio Hours</h3>
+                        <p>Monday - Friday: 10:00 AM - 6:00 PM</p>
+                        <p>Weekends: By appointment only</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name*</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address*</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject*</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message*</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to newsletter for updates on new artworks and exhibitions</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Collectors Say</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Sarah's artwork has brought so much life and energy to our home. The vibrant colors and dynamic composition of 'Colorful Dreams' is a constant source of inspiration."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="images/client1.jpg" alt="Michael Roberts">
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Roberts</h4>
+                            <p>Art Collector, Chicago</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Working with Sarah on a commissioned piece was a wonderful experience. She truly listened to what I wanted and created something that exceeded my expectations."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="images/client2.jpg" alt="Jennifer Chen">
+                        </div>
+                        <div class="author-info">
+                            <h4>Jennifer Chen</h4>
+                            <p>Interior Designer, New York</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"I've been following Sarah's work for years and have three of her pieces in my collection. Each one tells a different story and evokes different emotions. Truly a talented artist."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="images/client3.jpg" alt="David Thompson">
+                        </div>
+                        <div class="author-info">
+                            <h4>David Thompson</h4>
+                            <p>Gallery Owner, Los Angeles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About ArtGalleria</h3>
+                    <p>ArtGalleria is a collaborative marketplace connecting artists with art lovers worldwide. We believe in fair compensation for creators and authentic art for collectors.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="artists.html">Artists</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Art Street, Creative City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@artgalleria.com</p>
+                </div>
+                <div class="footer-section payment">
+                    <h3>Secure Payments</h3>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ArtGalleria. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/artist-profile.js"></script>
+</body>
+</html>
