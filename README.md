@@ -1,6 +1,6 @@
 # ArtGalleria - Collaborative Art Marketplace
 
-ArtGalleria is a web application that allows artists to showcase and sell their artwork to art enthusiasts around the world.
+🎨ArtGalleria is a web application that allows artists to showcase and sell their artwork to art enthusiasts around the world.
 
 ## Features
 
