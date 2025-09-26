@@ -1,0 +1,534 @@
+/* Artists Listing Page Styles */
+
+:root {
+    --primary-color: #6a5acd;
+    --secondary-color: #ff6b6b;
+    --text-color: #333;
+    --light-gray: #f9f9f9;
+    --border-color: #e0e0e0;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Page Banner */
+.page-banner {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.page-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.page-banner p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Artists Search Section */
+.artists-search {
+    padding: 40px 0;
+    background-color: var(--light-gray);
+}
+
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 50px 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(106, 90, 205, 0.1);
+}
+
+.search-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.search-btn:hover {
+    background-color: #5a4cac;
+}
+
+.filter-container {
+    display: flex;
+    gap: 15px;
+}
+
+.filter-dropdown, .sort-dropdown {
+    position: relative;
+}
+
+.filter-btn, .sort-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.filter-btn:hover, .sort-btn:hover {
+    border-color: var(--primary-color);
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 250px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 15px;
+    margin-top: 10px;
+    z-index: 10;
+    display: none;
+}
+
+.filter-dropdown:hover .dropdown-content,
+.sort-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-group h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.filter-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.filter-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: #555;
+    cursor: pointer;
+}
+
+.filter-options input {
+    cursor: pointer;
+}
+
+.filter-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.sort-option {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #555;
+    transition: var(--transition);
+}
+
+.sort-option:hover, .sort-option.active {
+    background-color: var(--light-gray);
+    color: var(--primary-color);
+}
+
+/* Featured Artists Section */
+.featured-artists {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.featured-artists h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.featured-artist-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.featured-artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.artist-banner {
+    height: 150px;
+    overflow: hidden;
+}
+
+.artist-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.featured-artist-card:hover .artist-banner img {
+    transform: scale(1.05);
+}
+
+.artist-info {
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.artist-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: -70px auto 15px;
+    border: 5px solid #fff;
+    box-shadow: var(--shadow);
+}
+
+.artist-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.artist-info h3 {
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+.artist-title {
+    color: #777;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.artist-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.artist-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* All Artists Section */
+.all-artists {
+    padding: 60px 0;
+    background-color: var(--light-gray);
+}
+
+.all-artists h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.artist-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.artist-image {
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+
+.artist-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.artist-card:hover .artist-image img {
+    transform: scale(1.05);
+}
+
+.artist-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.artist-card:hover .artist-overlay {
+    opacity: 1;
+}
+
+.artist-details {
+    padding: 20px;
+}
+
+.artist-details h3 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.artist-style {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.artist-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #777;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.artist-social {
+    display: flex;
+    gap: 10px;
+}
+
+.artist-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #555;
+    transition: var(--transition);
+}
+
+.artist-social a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #555;
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.page-link:hover, .page-link.active {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Become Artist Section */
+.become-artist {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.become-artist-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.content-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.content-text h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.content-text p {
+    margin-bottom: 25px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.benefits-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.benefits-list li i {
+    color: var(--primary-color);
+}
+
+.content-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.content-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .featured-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-container {
+        justify-content: space-between;
+    }
+    
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .artists-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .become-artist-content {
+        flex-direction: column;
+    }
+    
+    .content-image {
+        order: -1;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .artists-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-options {
+        grid-template-columns: 1fr;
+    }
+}

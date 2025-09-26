@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "johndoe",
+      "email": "john@example.com",
+      "password": "hashed_password_123",
+      "firstName": "John",
+      "lastName": "Doe",
+      "role": "buyer",
+      "profileImage": "images/users/user1.jpg",
+      "createdAt": "2025-01-15T10:30:00",
+      "lastLogin": "2025-03-20T14:45:00"
+    },
+    {
+      "id": 2,
+      "username": "sarahjohnson",
+      "email": "sarah@example.com",
+      "password": "hashed_password_456",
+      "firstName": "Sarah",
+      "lastName": "Johnson",
+      "role": "artist",
+      "profileImage": "images/artists/artist1.jpg",
+      "bio": "Contemporary abstract artist based in New York",
+      "createdAt": "2025-01-10T09:15:00",
+      "lastLogin": "2025-03-22T16:20:00",
+      "artistId": 1
+    },
+    {
+      "id": 3,
+      "username": "michaelchen",
+      "email": "michael@example.com",
+      "password": "hashed_password_789",
+      "firstName": "Michael",
+      "lastName": "Chen",
+      "role": "artist",
+      "profileImage": "images/artists/artist2.jpg",
+      "bio": "Digital art specialist from San Francisco",
+      "createdAt": "2025-01-12T11:45:00",
+      "lastLogin": "2025-03-21T10:30:00",
+      "artistId": 2
+    },
+    {
+      "id": 4,
+      "username": "elenarodriguez",
+      "email": "elena@example.com",
+      "password": "hashed_password_101",
+      "firstName": "Elena",
+      "lastName": "Rodriguez",
+      "role": "artist",
+      "profileImage": "images/artists/artist3.jpg",
+      "bio": "Impressionist painter from Barcelona",
+      "createdAt": "2025-01-14T14:20:00",
+      "lastLogin": "2025-03-23T09:10:00",
+      "artistId": 3
+    },
+    {
+      "id": 5,
+      "username": "alexsmith",
+      "email": "alex@example.com",
+      "password": "hashed_password_202",
+      "firstName": "Alex",
+      "lastName": "Smith",
+      "role": "buyer",
+      "profileImage": "images/users/user2.jpg",
+      "createdAt": "2025-01-18T16:40:00",
+      "lastLogin": "2025-03-19T11:25:00"
+    }
+  ]
+}

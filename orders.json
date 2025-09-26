@@ -1,0 +1,165 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "orderNumber": "ORD-25031001",
+      "items": [
+        {
+          "artworkId": 3,
+          "title": "Digital Dreamscape",
+          "artistId": 2,
+          "artistName": "Michael Chen",
+          "price": 1620.00,
+          "quantity": 1,
+          "image": "images/artworks/artwork3_1.jpg"
+        },
+        {
+          "artworkId": 5,
+          "title": "Mediterranean Sunset",
+          "artistId": 3,
+          "artistName": "Elena Rodriguez",
+          "price": 2880.00,
+          "quantity": 1,
+          "image": "images/artworks/artwork5_1.jpg"
+        }
+      ],
+      "subtotal": 4500.00,
+      "shipping": 150.00,
+      "tax": 450.00,
+      "total": 5100.00,
+      "shippingAddress": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "address": "123 Main Street",
+        "city": "New York",
+        "state": "NY",
+        "zipCode": "10001",
+        "country": "United States",
+        "phone": "+1 (555) 123-4567"
+      },
+      "billingAddress": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "address": "123 Main Street",
+        "city": "New York",
+        "state": "NY",
+        "zipCode": "10001",
+        "country": "United States",
+        "phone": "+1 (555) 123-4567"
+      },
+      "paymentMethod": "Credit Card",
+      "paymentDetails": {
+        "cardType": "Visa",
+        "lastFourDigits": "4567",
+        "expiryDate": "05/27"
+      },
+      "status": "completed",
+      "trackingNumber": "TRK123456789",
+      "notes": "Please handle with care",
+      "createdAt": "2025-03-10T14:30:00",
+      "updatedAt": "2025-03-12T10:15:00"
+    },
+    {
+      "id": 2,
+      "userId": 5,
+      "orderNumber": "ORD-25031502",
+      "items": [
+        {
+          "artworkId": 9,
+          "title": "Dreamwalker",
+          "artistId": 5,
+          "artistName": "Sophia Lee",
+          "price": 2975.00,
+          "quantity": 1,
+          "image": "images/artworks/artwork9_1.jpg"
+        }
+      ],
+      "subtotal": 2975.00,
+      "shipping": 120.00,
+      "tax": 297.50,
+      "total": 3392.50,
+      "shippingAddress": {
+        "firstName": "Alex",
+        "lastName": "Smith",
+        "address": "456 Oak Avenue",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zipCode": "90001",
+        "country": "United States",
+        "phone": "+1 (555) 234-5678"
+      },
+      "billingAddress": {
+        "firstName": "Alex",
+        "lastName": "Smith",
+        "address": "456 Oak Avenue",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zipCode": "90001",
+        "country": "United States",
+        "phone": "+1 (555) 234-5678"
+      },
+      "paymentMethod": "PayPal",
+      "paymentDetails": {
+        "email": "alex@example.com",
+        "transactionId": "PAY123456789"
+      },
+      "status": "shipped",
+      "trackingNumber": "TRK987654321",
+      "notes": "",
+      "createdAt": "2025-03-15T11:45:00",
+      "updatedAt": "2025-03-16T09:30:00"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "orderNumber": "ORD-25032003",
+      "items": [
+        {
+          "artworkId": 7,
+          "title": "Essence of Simplicity",
+          "artistId": 4,
+          "artistName": "David Kim",
+          "price": 1615.00,
+          "quantity": 1,
+          "image": "images/artworks/artwork7_1.jpg"
+        }
+      ],
+      "subtotal": 1615.00,
+      "shipping": 100.00,
+      "tax": 161.50,
+      "total": 1876.50,
+      "shippingAddress": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "address": "123 Main Street",
+        "city": "New York",
+        "state": "NY",
+        "zipCode": "10001",
+        "country": "United States",
+        "phone": "+1 (555) 123-4567"
+      },
+      "billingAddress": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "address": "123 Main Street",
+        "city": "New York",
+        "state": "NY",
+        "zipCode": "10001",
+        "country": "United States",
+        "phone": "+1 (555) 123-4567"
+      },
+      "paymentMethod": "Credit Card",
+      "paymentDetails": {
+        "cardType": "Mastercard",
+        "lastFourDigits": "8901",
+        "expiryDate": "09/26"
+      },
+      "status": "processing",
+      "trackingNumber": null,
+      "notes": "",
+      "createdAt": "2025-03-20T15:20:00",
+      "updatedAt": "2025-03-20T15:20:00"
+    }
+  ]
+}

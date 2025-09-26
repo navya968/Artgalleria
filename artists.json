@@ -1,0 +1,214 @@
+{
+  "artists": [
+    {
+      "id": 1,
+      "userId": 2,
+      "name": "Sarah Johnson",
+      "title": "Contemporary Abstract Artist",
+      "location": "New York, USA",
+      "bio": "Sarah Johnson is a contemporary abstract artist known for her vibrant use of color and dynamic compositions. With over 15 years of experience, her work has been featured in galleries across North America and Europe. Sarah draws inspiration from urban landscapes and natural phenomena, creating pieces that bridge the gap between chaos and harmony.",
+      "quote": "Art is not what you see, but what you make others see.",
+      "profileImage": "images/artists/artist1.jpg",
+      "bannerImage": "images/artist-banner1.jpg",
+      "email": "sarah@example.com",
+      "phone": "+1 (555) 123-4567",
+      "website": "www.sarahjohnsonart.com",
+      "social": {
+        "instagram": "sarahjohnsonart",
+        "facebook": "sarahjohnsonartist",
+        "twitter": "sarahjart",
+        "pinterest": "sarahjohnsonart"
+      },
+      "stats": {
+        "artworks": 120,
+        "exhibitions": 35,
+        "followers": 8500,
+        "years": 15
+      },
+      "availability": {
+        "commissions": true,
+        "teaching": true,
+        "collaborations": true
+      },
+      "schedule": {
+        "monday": "10:00 AM - 6:00 PM",
+        "tuesday": "10:00 AM - 6:00 PM",
+        "wednesday": "10:00 AM - 6:00 PM",
+        "thursday": "10:00 AM - 6:00 PM",
+        "friday": "10:00 AM - 4:00 PM",
+        "saturday": "By Appointment",
+        "sunday": "Closed"
+      },
+      "featured": true,
+      "createdAt": "2025-01-10T09:15:00"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "name": "Michael Chen",
+      "title": "Digital Art Specialist",
+      "location": "San Francisco, USA",
+      "bio": "Michael Chen is a pioneering digital artist who blends traditional artistic techniques with cutting-edge technology. His work explores the intersection of humanity and artificial intelligence, creating immersive digital experiences that challenge perceptions of reality. A graduate of the San Francisco Art Institute, Michael has collaborated with tech companies and museums worldwide.",
+      "quote": "The digital canvas has no boundaries, only the ones we imagine.",
+      "profileImage": "images/artists/artist2.jpg",
+      "bannerImage": "images/artist-banner2.jpg",
+      "email": "michael@example.com",
+      "phone": "+1 (555) 234-5678",
+      "website": "www.michaelchenart.com",
+      "social": {
+        "instagram": "michaelchenart",
+        "facebook": "michaelchenartist",
+        "twitter": "michaelcart",
+        "pinterest": "michaelchenart"
+      },
+      "stats": {
+        "artworks": 85,
+        "exhibitions": 22,
+        "followers": 6200,
+        "years": 8
+      },
+      "availability": {
+        "commissions": true,
+        "teaching": true,
+        "collaborations": true
+      },
+      "schedule": {
+        "monday": "9:00 AM - 5:00 PM",
+        "tuesday": "9:00 AM - 5:00 PM",
+        "wednesday": "9:00 AM - 5:00 PM",
+        "thursday": "9:00 AM - 5:00 PM",
+        "friday": "9:00 AM - 3:00 PM",
+        "saturday": "Closed",
+        "sunday": "Closed"
+      },
+      "featured": true,
+      "createdAt": "2025-01-12T11:45:00"
+    },
+    {
+      "id": 3,
+      "userId": 4,
+      "name": "Elena Rodriguez",
+      "title": "Impressionist Painter",
+      "location": "Barcelona, Spain",
+      "bio": "Elena Rodriguez is a celebrated impressionist painter whose work captures the light and atmosphere of the Mediterranean coast. Born and raised in Barcelona, her paintings reflect the rich cultural heritage and natural beauty of Catalonia. Elena's technique combines classical impressionist brushwork with contemporary themes, creating pieces that feel both timeless and relevant.",
+      "quote": "Every brushstroke is a moment captured in time, never to be repeated exactly the same way.",
+      "profileImage": "images/artists/artist3.jpg",
+      "bannerImage": "images/artist-banner3.jpg",
+      "email": "elena@example.com",
+      "phone": "+34 612 345 678",
+      "website": "www.elenarodriguezart.com",
+      "social": {
+        "instagram": "elenarodriguezart",
+        "facebook": "elenarodriguezartist",
+        "twitter": "elenaart",
+        "pinterest": "elenarodriguezart"
+      },
+      "stats": {
+        "artworks": 95,
+        "exhibitions": 28,
+        "followers": 7800,
+        "years": 12
+      },
+      "availability": {
+        "commissions": true,
+        "teaching": true,
+        "collaborations": false
+      },
+      "schedule": {
+        "monday": "By Appointment",
+        "tuesday": "11:00 AM - 7:00 PM",
+        "wednesday": "11:00 AM - 7:00 PM",
+        "thursday": "11:00 AM - 7:00 PM",
+        "friday": "11:00 AM - 7:00 PM",
+        "saturday": "12:00 PM - 4:00 PM",
+        "sunday": "Closed"
+      },
+      "featured": true,
+      "createdAt": "2025-01-14T14:20:00"
+    },
+    {
+      "id": 4,
+      "userId": null,
+      "name": "David Kim",
+      "title": "Minimalist Artist",
+      "location": "Seoul, South Korea",
+      "bio": "David Kim is a minimalist artist whose work is characterized by clean lines, subtle color palettes, and thoughtful composition. Influenced by both Korean traditional art and Western minimalism, David creates pieces that evoke tranquility and contemplation. His work has been featured in galleries across Asia and North America.",
+      "quote": "In simplicity lies the ultimate sophistication.",
+      "profileImage": "images/artists/artist4.jpg",
+      "bannerImage": "images/artist-banner4.jpg",
+      "email": "david@example.com",
+      "phone": "+82 10 1234 5678",
+      "website": "www.davidkimart.com",
+      "social": {
+        "instagram": "davidkimart",
+        "facebook": "davidkimartist",
+        "twitter": "davidkart",
+        "pinterest": "davidkimart"
+      },
+      "stats": {
+        "artworks": 65,
+        "exhibitions": 18,
+        "followers": 5400,
+        "years": 9
+      },
+      "availability": {
+        "commissions": true,
+        "teaching": false,
+        "collaborations": true
+      },
+      "schedule": {
+        "monday": "Closed",
+        "tuesday": "10:00 AM - 6:00 PM",
+        "wednesday": "10:00 AM - 6:00 PM",
+        "thursday": "10:00 AM - 6:00 PM",
+        "friday": "10:00 AM - 6:00 PM",
+        "saturday": "By Appointment",
+        "sunday": "Closed"
+      },
+      "featured": false,
+      "createdAt": "2025-01-20T10:30:00"
+    },
+    {
+      "id": 5,
+      "userId": null,
+      "name": "Sophia Lee",
+      "title": "Surrealist Painter",
+      "location": "London, UK",
+      "bio": "Sophia Lee is a surrealist painter whose dreamlike compositions challenge perceptions of reality. Drawing inspiration from both classical surrealism and contemporary psychology, her work explores the subconscious mind and collective human experiences. Sophia's paintings have been exhibited in prestigious galleries across Europe.",
+      "quote": "Dreams are the canvas where reality and imagination dance together.",
+      "profileImage": "images/artists/artist5.jpg",
+      "bannerImage": "images/artist-banner5.jpg",
+      "email": "sophia@example.com",
+      "phone": "+44 20 1234 5678",
+      "website": "www.sophialeeart.com",
+      "social": {
+        "instagram": "sophialeeart",
+        "facebook": "sophialeeartist",
+        "twitter": "sophialart",
+        "pinterest": "sophialeeart"
+      },
+      "stats": {
+        "artworks": 78,
+        "exhibitions": 24,
+        "followers": 6800,
+        "years": 11
+      },
+      "availability": {
+        "commissions": true,
+        "teaching": true,
+        "collaborations": true
+      },
+      "schedule": {
+        "monday": "By Appointment",
+        "tuesday": "11:00 AM - 7:00 PM",
+        "wednesday": "11:00 AM - 7:00 PM",
+        "thursday": "11:00 AM - 7:00 PM",
+        "friday": "11:00 AM - 5:00 PM",
+        "saturday": "12:00 PM - 4:00 PM",
+        "sunday": "Closed"
+      },
+      "featured": false,
+      "createdAt": "2025-01-25T14:45:00"
+    }
+  ]
+}
